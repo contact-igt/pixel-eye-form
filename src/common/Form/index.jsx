@@ -70,7 +70,7 @@ const Form = () => {
           />
         </div>
 
-        <div className={`${styles.formtitle} mt-2 mb-3`}>
+        <div className={`${styles.formtitle} mt-2 mb-lg-3 mb-4 `}>
           <h4>Appointment Form</h4>
           <p>Provide your details to confirm your screening or consultation</p>
         </div>
@@ -134,7 +134,7 @@ const Form = () => {
           </div>
 
           <div
-            className={`${styles.inputgrp} w-100 pt-3 mb-2 position-relative `}
+            className={`${styles.inputgrp} w-100 pt-md-3 pt-2 mb-2 position-relative `}
           >
             <button className={`${styles.sbtn} btn w-100`} type="submit">
               BOOK NOW

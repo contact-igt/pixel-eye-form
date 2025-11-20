@@ -106,3 +106,59 @@
     font-weight: 500;
 
 }
+
+@media (width < 1200px) {
+
+    .inputgrp{
+        margin-bottom: 20px;
+    }
+
+    .formpopup{
+      padding-bottom: 20px;
+
+        
+    }
+    .inputgrp input{
+        padding: 12px 35px;
+    }
+    
+    .inputicon{
+        padding-left: 0px;
+        top: 46px;
+    }
+
+    .formpopup{
+        width: 100%;
+    }
+}
+
+@media (width < 576px) {
+
+    .formpopup{
+        padding: 20px ;
+    }
+
+    .inputgrp label{
+        font-size: 12px;
+        margin-bottom: 5px;
+
+    }
+
+    .inputgrp input{
+        padding: 10px 35px;
+    }
+    .inputgrp{
+        margin-bottom: 15px;
+    }
+    .formtitle h4{
+        font-size: 20px;
+    }
+
+    .formtitle p{
+        font-size: 12px;
+    }
+    .inputicon{
+        top: 40px;
+    }
+    
+}
