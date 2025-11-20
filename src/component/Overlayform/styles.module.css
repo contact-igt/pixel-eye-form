@@ -17,3 +17,9 @@
         top: 50%;
     }
 }
+
+@media (width < 420px) {
+    .overlayform {
+        top: 45%;
+    }
+}

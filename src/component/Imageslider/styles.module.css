@@ -1,7 +1,7 @@
 .sliderSection {
   width: 100%;
-   height: 100vh;
-  min-height: 100vh;
+   height: 800px;
+  min-height: 800px;
   position: relative;
   overflow: hidden;
 }
@@ -27,13 +27,13 @@
 
 .slide {
   width: 100%;
-  height: 100vh;
+  height: 800px;
 }
 
 .heroBg {
   width: 100%;
-   height: 100vh;
-  min-height: 100vh;
+   height: 100%;
+  min-height: 100%;
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -42,7 +42,7 @@
 @media (max-width: 1400px) {
   .sliderSection,
   .slide {
-    height: 100vh;
+    height: 800px;
   }
 
   .heroBg {
@@ -53,7 +53,7 @@
 @media (max-width: 1200px) {
   .sliderSection,
   .slide {
-    height: 100vh;
+    height: 800px;
   }
 
   .heroBg {
@@ -63,7 +63,7 @@
 @media (max-width: 992px) {
   .sliderSection,
   .slide {
-    height: 100vh;
+    height: 800px;
   }
 
   .heroBg {
