@@ -52,13 +52,19 @@
 .sbtn,
 .sbtn:hover {
     background: linear-gradient(130deg, #0e426a, #dd8a32), ;
-    color: #fff;
+    color: #fff !important;
     padding: 14px 70px;
     font-weight: 600;
     border-radius: 100px;
-
+    position: relative;
+    overflow: hidden;
+    border: none;
 }
-
+.sbtn:active, .sbtn:focus {
+    border: none;
+    outline: none;
+    color: #fff !important;
+}
 
 .sbtn::before {
     content: "";
