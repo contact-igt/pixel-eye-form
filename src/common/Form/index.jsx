@@ -3,6 +3,7 @@ import styles from "./styles.module.css";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import { Mail, Phone, User } from "lucide-react";
+import { useEffect } from "react";
 
 const Form = () => {
   const Formik = useFormik({
@@ -20,10 +21,41 @@ const Form = () => {
         .required("Mobile number is required"),
     }),
 
-    onSubmit: (values) => {
+    onSubmit: async (values) => {
       console.log("form sumbited", values);
+      const ipResponse = await fetch("https://api.ipify.org?format=json");
+      const ipData = await ipResponse.json();
+
+      try {
+        const newFormData = {
+          name: values?.name,
+          mobile: values?.mobile,
+          email: values?.email,
+          ip_address: ipData.ip,
+          utm_source: localStorage.getItem("utm_source"),
+        };
+        const response = await fetch(
+          "https://script.google.com/macros/s/AKfycbx2Nkvdx2yoBTSc3FqN4dju5uglKN2UdL8aRT5F5JNUdSGe5b3LqMN5ySRknV_JjSTd/exec",
+          {
+            method: "POST",
+            mode: "no-cors",
+            headers: {
+              "Content-Type": "application/x-www-form-urlencoded",
+            },
+            body: new URLSearchParams(newFormData).toString(),
+          }
+        );
+        // window.location.href = "/success";
+        localStorage.setItem("isSubmited", true);
+      } catch (err) {
+        // window.location.href = "/error";
+      }
     },
   });
+
+  useEffect(() => {
+    localStorage.removeItem("isSubmited");
+  }, []);
 
   return (
     <section className={styles.formpopup}>
@@ -38,7 +70,12 @@ const Form = () => {
           />
         </div>
 
-        <div className={`${styles.inputSection} mt-3`}>
+        <div className={`${styles.formtitle} mt-2 mb-3`}>
+          <h4>Appointment Form</h4>
+          <p>Provide your details to confirm your screening or consultation</p>
+        </div>
+
+        <div className={`${styles.inputSection}`}>
           <div className={styles.inputgrp}>
             <label for="name">Full Name</label>
             <input
@@ -96,7 +133,9 @@ const Form = () => {
             </div>
           </div>
 
-          <div className={`${styles.inputgrp} w-100 pt-3 mb-2`}>
+          <div
+            className={`${styles.inputgrp} w-100 pt-3 mb-2 position-relative `}
+          >
             <button className={`${styles.sbtn} btn w-100`} type="submit">
               BOOK NOW
             </button>

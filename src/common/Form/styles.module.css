@@ -1,13 +1,13 @@
 .inputgrp label {
     margin-bottom: 10px;
-    color: #0e426a;
+    color: #ffff;
     font-weight: 500;
     font-size: 14px;
     padding-left: 5px;
 }
 
 .inputgrp {
-    margin-bottom: 33px;
+    margin-bottom: 25px;
     position: relative;
 }
 
@@ -34,14 +34,14 @@
 }
 
 .formpopup {
-    width: 600px;
-    padding-top: 30px;
-    padding-bottom: 50px;
+    width: 550px;
+    padding-top: 20px;
+    padding-bottom: 30px;
     padding-left: 40px;
     padding-right: 40px;
     border-radius: 10px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    background-color: #f8f9fa;
+    background-color: #f8f9fa38;
 }
 
 .inputicon {
@@ -51,12 +51,12 @@
 
 .sbtn,
 .sbtn:hover {
-    /* background-color: #dd8a32; */
-    background: linear-gradient(130deg , #0e426a , #dd8a32) ,;
+    background: linear-gradient(130deg, #0e426a, #dd8a32), ;
     color: #fff;
     padding: 14px 70px;
     font-weight: 600;
     border-radius: 100px;
+
 }
 
 
@@ -64,24 +64,24 @@
     content: "";
     position: absolute;
     top: 0;
-    left: -75%;
+    left: -80%;
     width: 50%;
     height: 100%;
     background: linear-gradient(120deg,
             rgba(255, 255, 255, 0) 0%,
             rgba(255, 255, 255, 0.35) 50%,
             rgba(255, 255, 255, 0) 100%);
-    animation: shine 2s infinite linear;
+    animation: shine 3s infinite linear;
     border: none;
 }
 
 @keyframes shine {
     0% {
-        left: -75%;
+        left: -1%;
     }
 
     100% {
-        left: 125%;
+        left: 60%;
     }
 }
 
@@ -89,4 +89,20 @@
     font-weight: 600;
     font-size: 12px;
     padding-left: 5px;
+}
+
+.formtitle{
+    color: #fff;
+    text-align: center;
+}
+
+.formtitle h4{
+    font-weight: 600;
+    font-size: 26px;
+}
+
+.formtitle p{
+    font-size: 14px;
+    font-weight: 500;
+
 }
