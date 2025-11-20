@@ -63,8 +63,8 @@ const Form = () => {
         <div className={`${styles.brandlogo} d-flex justify-content-center`}>
           <Image
             src={"/assets/pixel_logo.png"}
-            width={180}
-            height={90}
+            width={160}
+            height={80}
             objectFit="cover"
             alt="pixel-eye-logo"
           />

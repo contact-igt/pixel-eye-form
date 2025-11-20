@@ -91,17 +91,17 @@
     padding-left: 5px;
 }
 
-.formtitle{
+.formtitle {
     color: #fff;
     text-align: center;
 }
 
-.formtitle h4{
+.formtitle h4 {
     font-weight: 600;
     font-size: 26px;
 }
 
-.formtitle p{
+.formtitle p {
     font-size: 14px;
     font-weight: 500;
 
@@ -109,56 +109,65 @@
 
 @media (width < 1200px) {
 
-    .inputgrp{
+    .inputgrp {
         margin-bottom: 20px;
     }
 
-    .formpopup{
-      padding-bottom: 20px;
+    .formpopup {
+        padding-bottom: 20px;
 
-        
+
     }
-    .inputgrp input{
+
+    .inputgrp input {
         padding: 12px 35px;
     }
-    
-    .inputicon{
+
+    .inputicon {
         padding-left: 0px;
         top: 46px;
     }
 
-    .formpopup{
+    .formpopup {
         width: 100%;
     }
 }
 
 @media (width < 576px) {
 
-    .formpopup{
-        padding: 20px ;
+    .formpopup {
+        padding: 20px;
     }
 
-    .inputgrp label{
+    .inputgrp label {
         font-size: 12px;
         margin-bottom: 5px;
 
     }
 
-    .inputgrp input{
+    .inputgrp input::placeholder {
+        font-size: 12px;
+    }
+
+    .inputgrp input {
         padding: 10px 35px;
     }
-    .inputgrp{
-        margin-bottom: 15px;
-    }
-    .formtitle h4{
+
+    .formtitle h4 {
         font-size: 20px;
     }
 
-    .formtitle p{
+    .formtitle p {
         font-size: 12px;
     }
-    .inputicon{
-        top: 40px;
+
+    .inputicon {
+        top: 39px;
     }
-    
+
+    .sbtn,
+    .sbtn:hover {
+        font-size: 12px;
+    }
+
 }
