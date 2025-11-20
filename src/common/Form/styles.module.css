@@ -141,7 +141,13 @@
     }
 
     .formpopup {
-        width: 100%;
+        width: 600px !important;
+    }
+}
+@media (width < 768px) {
+
+    .formpopup {
+        width: 90% !important;
     }
 }
 
