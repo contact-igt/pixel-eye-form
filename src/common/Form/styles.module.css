@@ -1,0 +1,92 @@
+.inputgrp label {
+    margin-bottom: 10px;
+    color: #0e426a;
+    font-weight: 500;
+    font-size: 14px;
+    padding-left: 5px;
+}
+
+.inputgrp {
+    margin-bottom: 33px;
+    position: relative;
+}
+
+.inputgrp input {
+    padding: 15px 0px;
+    padding-left: 35px;
+    font-size: 16px;
+    background-color: #fff !important;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+}
+
+.inputgrp input:focus {
+    border: none !important;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px !important;
+    background-color: #fff !important;
+
+}
+
+.inputgrp input::placeholder {
+    font-size: 13px;
+    font-weight: 600;
+    color: rgb(165, 163, 163);
+
+}
+
+.formpopup {
+    width: 600px;
+    padding-top: 30px;
+    padding-bottom: 50px;
+    padding-left: 40px;
+    padding-right: 40px;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    background-color: #f8f9fa;
+}
+
+.inputicon {
+    top: 48px;
+    left: 10px;
+}
+
+.sbtn,
+.sbtn:hover {
+    /* background-color: #dd8a32; */
+    background: linear-gradient(130deg , #0e426a , #dd8a32) ,;
+    color: #fff;
+    padding: 14px 70px;
+    font-weight: 600;
+    border-radius: 100px;
+}
+
+
+.sbtn::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -75%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(120deg,
+            rgba(255, 255, 255, 0) 0%,
+            rgba(255, 255, 255, 0.35) 50%,
+            rgba(255, 255, 255, 0) 100%);
+    animation: shine 2s infinite linear;
+    border: none;
+}
+
+@keyframes shine {
+    0% {
+        left: -75%;
+    }
+
+    100% {
+        left: 125%;
+    }
+}
+
+.inputgrp small {
+    font-weight: 600;
+    font-size: 12px;
+    padding-left: 5px;
+}

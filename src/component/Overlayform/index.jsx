@@ -3,7 +3,7 @@ import styles from "./styles.module.css";
 
 const OverlayForm = () => {
   return (
-    <section>
+    <section className="d-flex justify-content-center">
       <Form />
     </section>
   );
