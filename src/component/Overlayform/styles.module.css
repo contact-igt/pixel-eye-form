@@ -1,25 +1,29 @@
 .overlayform {
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 90%;
-    max-width: 600px;
-    z-index: 999;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 999;
+  width: 100%;
+  max-width: 600px;
 }
-.overlayform h3{
-    text-align: center;
-    margin: 30px 20px 30px 0;
-    color:  #fff;
-    font-weight: 700;
+.overlayform h3 {
+  text-align: center;
+  margin: 30px 20px 30px 0;
+  color: #fff;
+  font-weight: 700;
+  font-size: 45px;
 }
 @media (width < 576px) {
-    .overlayform {
-        top: 50%;
-    }
+  .overlayform {
+    top: 50%;
+  }
+  .overlayform h3 {
+    font-size: 28px;
+  }
 }
 
 @media (width < 420px) {
-    .overlayform {
-        top: 45%;
-    }
+  .overlayform {
+    top: 45%;
+  }
 }
