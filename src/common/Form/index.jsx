@@ -7,6 +7,7 @@ import { useEffect, useState } from "react";
 
 const Form = () => {
   const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(null);
   const Formik = useFormik({
     initialValues: {
       name: "",
@@ -50,6 +51,7 @@ const Form = () => {
         window.location.href = "/thank-you";
         localStorage.setItem("isSubmited", true);
       } catch (err) {
+        setError("Something went wrong. Please try again.")
         setLoading(false);
         // window.location.href = "/error";
       }
@@ -135,10 +137,14 @@ const Form = () => {
               <Mail color="#0e426a" size={18} />
             </div>
           </div>
-
           <div
             className={`${styles.inputgrp} w-100 pt-md-3 pt-2 mb-2 position-relative `}
           >
+            {error ? (
+              <small className="text-danger">{error}</small>
+            ) : (
+              ""
+            )}
             <button className={`${styles.sbtn} btn w-100`} type="submit">
               {loading ? "Booking..." : "BOOK NOW"}
             </button>

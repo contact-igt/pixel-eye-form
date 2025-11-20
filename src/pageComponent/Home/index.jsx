@@ -1,12 +1,15 @@
+import Header from "@/common/Header";
 import ImageSlider from "@/component/Imageslider";
 import OverlayForm from "@/component/Overlayform";
 
 const HomePageComponent = () => {
-  return (
-    <div className="position-relative overflow-hidden">
+  return (<>
+    <Header />
+    <div className="position-relative">
       <ImageSlider />
       <OverlayForm />
     </div>
+  </>
   );
 };
 
