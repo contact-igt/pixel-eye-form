@@ -60,7 +60,9 @@
     overflow: hidden;
     border: none;
 }
-.sbtn:active, .sbtn:focus {
+
+.sbtn:active,
+.sbtn:focus {
     border: none;
     outline: none;
     color: #fff !important;
@@ -156,7 +158,8 @@
     }
 
     .inputgrp input {
-        padding: 10px 35px;
+        padding: 13px 35px;
+        font-size: 13px;
     }
 
     .formtitle h4 {
@@ -168,12 +171,13 @@
     }
 
     .inputicon {
-        top: 39px;
+        top: 37px;
     }
 
     .sbtn,
     .sbtn:hover {
         font-size: 12px;
+        padding: 15px;
     }
 
 }

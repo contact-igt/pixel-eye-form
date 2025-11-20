@@ -1,4 +1,4 @@
-import ThankyouPageComponent from "@/PageComponent/Thankyou";
+import ThankyouPageComponent from "@/pageComponent/Thankyou";
 
 
 export default function Thankyou() {
