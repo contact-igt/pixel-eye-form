@@ -145,7 +145,7 @@ const Form = () => {
             ) : (
               ""
             )}
-            <button className={`${styles.sbtn} btn w-100`} type="submit">
+            <button disabled={loading} className={`${styles.sbtn} w-100`} type={loading ? undefined : "submit"}>
               {loading ? "Booking..." : "BOOK NOW"}
             </button>
           </div>
