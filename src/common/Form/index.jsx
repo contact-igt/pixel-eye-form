@@ -3,9 +3,10 @@ import styles from "./styles.module.css";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import { Mail, Phone, User } from "lucide-react";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 const Form = () => {
+  const [loading, setLoading] = useState(false);
   const Formik = useFormik({
     initialValues: {
       name: "",
@@ -25,7 +26,7 @@ const Form = () => {
       console.log("form sumbited", values);
       const ipResponse = await fetch("https://api.ipify.org?format=json");
       const ipData = await ipResponse.json();
-
+      setLoading(true);
       try {
         const newFormData = {
           name: values?.name,
@@ -45,9 +46,11 @@ const Form = () => {
             body: new URLSearchParams(newFormData).toString(),
           }
         );
-        // window.location.href = "/success";
+        setLoading(false);
+        window.location.href = "/thank-you";
         localStorage.setItem("isSubmited", true);
       } catch (err) {
+        setLoading(false);
         // window.location.href = "/error";
       }
     },
@@ -137,7 +140,7 @@ const Form = () => {
             className={`${styles.inputgrp} w-100 pt-md-3 pt-2 mb-2 position-relative `}
           >
             <button className={`${styles.sbtn} btn w-100`} type="submit">
-              BOOK NOW
+              {loading ? "Booking..." : "BOOK NOW"}
             </button>
           </div>
         </div>
