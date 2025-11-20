@@ -62,10 +62,10 @@ const Form = () => {
       <form onSubmit={Formik.handleSubmit}>
         <div className={`${styles.brandlogo} d-flex justify-content-center`}>
           <Image
-            src={"/assets/pixel_logo.png"}
+            src={"/assets/pixel_logo2.png"}
             width={180}
             height={90}
-            objectFit="cover"
+                style={{ objectFit: "cover" }}
             alt="pixel-eye-logo"
           />
         </div>

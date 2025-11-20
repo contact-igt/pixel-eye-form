@@ -56,7 +56,8 @@
     padding: 14px 70px;
     font-weight: 600;
     border-radius: 100px;
-
+    position: relative;
+    overflow: hidden;
 }
 
 
