@@ -25,7 +25,7 @@ const Thankyou = () => {
 
       <div className={`${styles.videoContainer} mt-4`}>
         <iframe
-          src="https://www.youtube.com/embed/DJXRQDws02I"
+          src="https://www.youtube.com/embed/UmshBUvoMMg?si=SqoOBqAJ5p_LES80"
           title="YouTube video player"
           frameBorder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
