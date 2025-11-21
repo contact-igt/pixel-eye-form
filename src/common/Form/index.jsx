@@ -17,7 +17,7 @@ const Form = () => {
 
     validationSchema: Yup.object({
       name: Yup.string().matches(/^[A-Za-z\s']+$/, "Enter valid name"),
-      email: Yup.string().required("Email is required"),
+      email: Yup.string(),
       mobile: Yup.string()
         .matches(/^[0-9]{10}$/, "Mobile number must be 10 digits")
         .required("Mobile number is required"),
@@ -120,7 +120,7 @@ const Form = () => {
           </div>
 
           <div className={styles.inputgrp}>
-            <label for="Email">Email Address *</label>
+            <label for="Email">Email Address</label>
             <input
               type="email"
               class="form-control"
