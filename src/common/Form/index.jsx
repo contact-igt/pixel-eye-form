@@ -70,7 +70,7 @@ const Form = () => {
             src={"/assets/pixeyelogo.png"}
             width={140}
             height={60}
-            objectFit="cover"
+            style={{objectFit:"cover"}}
             alt="pixel-eye-logo"
           />
         </div>
@@ -82,10 +82,10 @@ const Form = () => {
 
         <div className={`${styles.inputSection}`}>
           <div className={styles.inputgrp}>
-            <label for="name">Full Name</label>
+            <label htmlFor="name">Full Name</label>
             <input
               type="text"
-              class="form-control"
+              className="form-control"
               id="name"
               placeholder="Enter full name"
               {...Formik.getFieldProps("name")}
@@ -101,10 +101,10 @@ const Form = () => {
           </div>
 
           <div className={styles.inputgrp}>
-            <label for="exampleInputEmail1">Mobile Number *</label>
+            <label htmlFor="exampleInputEmail1">Mobile Number *</label>
             <input
               type="text"
-              class="form-control"
+              className="form-control"
               id="mobile"
               placeholder="Enter mobile number"
               {...Formik.getFieldProps("mobile")}
@@ -120,10 +120,10 @@ const Form = () => {
           </div>
 
           <div className={styles.inputgrp}>
-            <label for="Email">Email Address</label>
+            <label htmlFor="Email">Email Address</label>
             <input
               type="email"
-              class="form-control"
+              className="form-control"
               id="Email"
               placeholder="Enter email address"
               {...Formik.getFieldProps("email")}
